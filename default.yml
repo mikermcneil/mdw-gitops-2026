@@ -12,7 +12,7 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 org_settings: 
-  secrets:
+  secrets: # « Just for compatibility w/ ≤v4.82
   org_info:
     ###########################################################
     # The name of your organization is displayed to end users
@@ -135,8 +135,9 @@ controls:
 # > "Make sure everyone in finance has the latest version of Excel"
 ###########################################################
 labels:
-  # - paths: ./labels/*.yml
+  # - paths: ./labels/*.yml « # Just for compatibility w/ ≤v4.82
 
+# Just for compatibility w/ ≤v4.82
 agent_options:
 reports:
 policies:

@@ -107,3 +107,9 @@ software:
     #   display_name: "Slack"
     #   self_service: true
     #   setup_experience: true
+
+# Just for compatibility w/ ≤v4.82
+settings:
+agent_options:
+reports:
+policies:

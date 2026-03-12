@@ -189,3 +189,9 @@ software:
 
   app_store_apps: # Apps to install via VPP from the macOS App Store, if any
     # …
+
+# Just for compatibility w/ ≤v4.82
+settings:
+agent_options:
+reports:
+policies:
