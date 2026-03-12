@@ -112,7 +112,8 @@ software:
 
 # Just for compatibility w/ ≤v4.82
 settings:
-  secrets: # « Just for compatibility w/ ≤v4.82
+  secrets:
+    - secret: "9a8b7c6d-e5f4-4a3b-2c1d-0e9f8a7b6c5d"
 agent_options:
 reports:
 policies:
