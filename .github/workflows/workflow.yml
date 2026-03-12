@@ -33,8 +33,8 @@ jobs:
       - name: Checkout this repository
         uses: actions/checkout@v4
 
-      # - name: Checkout this repository
-      #   run: chmod +x
+      - name: Checkout this repository
+        run: chmod +x ./.github/fleet-gitops/gitops.sh
 
       - name: Apply latest configuration to Fleet
         uses: ./.github/fleet-gitops
