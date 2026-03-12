@@ -12,6 +12,8 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 org_settings: 
+  secrets:
+  agent_options:
   org_info:
     ###########################################################
     # The name of your organization is displayed to end users
@@ -134,5 +136,7 @@ controls:
 # > "Make sure everyone in finance has the latest version of Excel"
 ###########################################################
 labels:
-  - paths: ./labels/*.yml
+  # - paths: ./labels/*.yml
 
+reports:
+policies:
