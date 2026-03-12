@@ -169,13 +169,26 @@ software:
       setup_experience: true
       categories:
         - Security
-    # …
-    # - slug: slack/darwin # Slack for macOS
-    #   self_service: true
-    #   setup_experience: true
-    #   categories:
-    #     - Communication
-    #     - Productivity
+    - slug: google-chrome/darwin # Google Chrome for macOS
+      self_service: true
+      setup_experience: true
+      categories:
+        - Productivity
+    - slug: slack/darwin # Slack for macOS
+      self_service: true
+      setup_experience: true
+      categories:
+        - Communication
+        - Productivity
+    - slug: mozilla-firefox/darwin # Mozilla Firefox for macOS
+      self_service: true
+      categories:
+        - Productivity
+    - slug: 1password/darwin # 1Password for macOS
+      self_service: true
+      setup_experience: true
+      categories:
+        - Security
 
     # Windows apps
     - slug: cloudflare-warp/windows # Cloudflare WARP for Windows
@@ -183,15 +196,32 @@ software:
       setup_experience: true
       categories:
         - Security
-    # …
-    # - slug: slack/windows # Slack for Windows
-    #   self_service: true
-    #   setup_experience: true
-    #   categories:
-    #     - Productivity
-    #     - Communication
-    #   labels_include_any:
-    #     - "x86-based Windows hosts"
+    - slug: zoom/windows # Zoom for Windows
+      self_service: true
+      setup_experience: true
+      categories:
+        - Communication
+        - Productivity
+    - slug: google-chrome/windows # Google Chrome for Windows
+      self_service: true
+      setup_experience: true
+      categories:
+        - Productivity
+    - slug: slack/windows # Slack for Windows
+      self_service: true
+      setup_experience: true
+      categories:
+        - Communication
+        - Productivity
+    - slug: mozilla-firefox/windows # Mozilla Firefox for Windows
+      self_service: true
+      categories:
+        - Productivity
+    - slug: 1password/windows # 1Password for Windows
+      self_service: true
+      setup_experience: true
+      categories:
+        - Security
 
   packages: # Custom packages (if any)
     # macOS custom packages
@@ -205,7 +235,11 @@ software:
     # …
 
     # Linux custom packages
-    # …
+    - path: ../platforms/linux/software/zoom.deb.software.yml
+      self_service: true
+      categories:
+        - Communication
+        - Productivity
 
   app_store_apps: # Apps to install via VPP from the macOS App Store, if any
     # …
