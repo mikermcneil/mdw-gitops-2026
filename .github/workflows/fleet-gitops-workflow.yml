@@ -42,5 +42,6 @@ jobs:
           # These environment variables can be set as repository secrets,
           # alongside any other environment variables mentioned in your .yml files.
           FLEET_API_TOKEN: ${{ secrets.FLEET_API_TOKEN }} # required
+          FLEET_URL: ${{ secrets.FLEET_URL }}
           
           
