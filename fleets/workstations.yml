@@ -60,13 +60,13 @@ controls:
   ###########################################################
   apple_settings:
     profiles:
-      - paths: ../platforms/macos/declaration-profiles/*.json
+      # - paths: ../platforms/macos/declaration-profiles/*.json  # Glob paths not yet supported
       - path: ../platforms/macos/configuration-profiles/disable-bluetooth-file-sharing.mobileconfig
         labels_include_any:
           - "Department: Engineering"
   windows_settings:
     profiles:
-      - paths: ../platforms/windows/configuration-profiles/*.xml
+      # - paths: ../platforms/windows/configuration-profiles/*.xml  # Glob paths not yet supported
   
   ###########################################################
   # Managed disk encryption
@@ -113,8 +113,10 @@ controls:
   # > using `paths` below.
   ###########################################################
   scripts:
-    - paths: ../platforms/macos/scripts/*.sh
-    - paths: ../platforms/windows/scripts/*.ps1
+    # - paths: ../platforms/macos/scripts/*.sh  # Glob paths not yet supported
+    - path: ../platforms/macos/scripts/set-dns-cloudflare.sh
+    # - paths: ../platforms/windows/scripts/*.ps1  # Glob paths not yet supported
+    - path: ../platforms/windows/scripts/set-wallpaper.ps1
     # - paths: ../platforms/linux/scripts/*.sh
 
 ###########################################################
@@ -129,10 +131,10 @@ controls:
 # > using `paths` below.
 ###########################################################
 reports:
-  - paths: ../platforms/all/reports/*.yml
-  - paths: ../platforms/macos/reports/*.yml
-  - paths: ../platforms/windows/reports/*.yml
-  - paths: ../platforms/linux/reports/*.yml
+  # - paths: ../platforms/all/reports/*.yml  # Glob paths not yet supported
+  # - paths: ../platforms/macos/reports/*.yml  # Glob paths not yet supported
+  # - paths: ../platforms/windows/reports/*.yml  # Glob paths not yet supported
+  # - paths: ../platforms/linux/reports/*.yml  # Glob paths not yet supported
 
 ###########################################################
 # Policies & automations
@@ -147,9 +149,11 @@ reports:
 # > using `paths` below.
 ###########################################################
 policies:
-  - paths: ../platforms/macos/policies/*.yml
-  - paths: ../platforms/windows/policies/*.yml
-  - paths: ../platforms/linux/policies/*.yml
+  # - paths: ../platforms/macos/policies/*.yml  # Glob paths not yet supported
+  - path: ../platforms/macos/policies/all-software-updates-installed.yml
+  - path: ../platforms/macos/policies/dns-cloudflare.yml
+  # - paths: ../platforms/windows/policies/*.yml  # Glob paths not yet supported
+  # - paths: ../platforms/linux/policies/*.yml  # Glob paths not yet supported
 
 ###########################################################
 # Software available for install
