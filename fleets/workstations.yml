@@ -195,3 +195,4 @@ settings:
 agent_options:
 reports:
 policies:
+secrets: # « Just for compatibility w/ ≤v4.82
