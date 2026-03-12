@@ -43,6 +43,15 @@ org_settings:
     server_url: $FLEET_URL #"https://fleet.example.com"
     #           ^TODO: Replace with the URL where Fleet is running.
 
+  host_expiry_settings:
+    host_expiry_enabled: true
+    host_expiry_window: 30
+
+  webhook_settings:
+    activities_webhook:
+      enable_activities_webhook: true
+      destination_url: https://webhook.site/#!/view/a3b1f7c2-9d4e-4f8a-b6e5-1c2d3e4f5a6b
+
   fleet_desktop:
     transparency_url: https://omfgdogs.com
 
@@ -139,6 +148,19 @@ controls:
 ###########################################################
 labels:
   # - paths: ./labels/*.yml « # Just for compatibility w/ ≤v4.82
+  - name: "Department: Engineering"
+    description: Hosts belonging to the Engineering department (from IDP)
+    label_membership_type: host_vitals
+    criteria:
+      vital: end_user_idp_department
+      value: Engineering
+  - name: "Uptime >30 days"
+    description: Hosts with uptime greater than 30 days
+    query: SELECT 1 FROM uptime WHERE total_seconds > 2592000;
+    label_membership_type: dynamic
+  - name: "C-suite"
+    description: Hosts belonging to C-suite executives
+    label_membership_type: manual
 
 # Just for compatibility w/ ≤v4.82
 agent_options:
