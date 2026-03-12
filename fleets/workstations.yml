@@ -164,6 +164,11 @@ policies:
 software:
   fleet_maintained_apps:
     # macOS apps
+    - slug: cloudflare-warp/darwin # Cloudflare WARP for macOS
+      self_service: true
+      setup_experience: true
+      categories:
+        - Security
     # …
     # - slug: slack/darwin # Slack for macOS
     #   self_service: true
@@ -173,6 +178,11 @@ software:
     #     - Productivity
 
     # Windows apps
+    - slug: cloudflare-warp/windows # Cloudflare WARP for Windows
+      self_service: true
+      setup_experience: true
+      categories:
+        - Security
     # …
     # - slug: slack/windows # Slack for Windows
     #   self_service: true
@@ -191,12 +201,8 @@ software:
       categories:
         - Communication
         - Productivity
-    # Cloudflare WARP macOS — commented out due to 403 errors from CDN bot protection
-    # - path: ../platforms/macos/software/cloudflare-warp.pkg.software.yml
-
     # Windows custom packages
-    # Cloudflare WARP Windows — commented out due to 403 errors from CDN bot protection
-    # - path: ../platforms/windows/software/cloudflare-warp.msi.software.yml
+    # …
 
     # Linux custom packages
     # …
