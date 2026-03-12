@@ -43,9 +43,9 @@ controls:
   ###########################################################
   apple_settings:
     profiles:
-      # … e.g.
-      # - path: ../lib/ios/declaration-profiles/Passcode settings.json
-      # - path: ../lib/ios/configuration-profiles/self-service.mobileconfig
+      - path: ../platforms/ios/declaration-profiles/passcode-settings.json
+        labels_exclude_any:
+          - "C-suite"
   android_settings:
     profiles:
     certificates:
@@ -64,9 +64,11 @@ controls:
   # ios_updates:
   #   deadline: "2030-04-01"
   #   minimum_version: "18.5"
-  # ipados_updates:
-  #   deadline: "2030-04-01"
-  #   minimum_version: "18.5"
+  ipados_updates:
+    deadline: "2026-03-31"
+    minimum_version: "26.2"
+
+  enable_disk_encryption: true
 
 ###########################################################
 # Apps to make available from the Apple App Store or Google Play
