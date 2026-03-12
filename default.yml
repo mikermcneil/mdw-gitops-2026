@@ -13,7 +13,6 @@
 
 org_settings: 
   secrets:
-  agent_options:
   org_info:
     ###########################################################
     # The name of your organization is displayed to end users
@@ -138,5 +137,6 @@ controls:
 labels:
   # - paths: ./labels/*.yml
 
+agent_options:
 reports:
 policies:
