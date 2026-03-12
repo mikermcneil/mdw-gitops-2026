@@ -111,9 +111,9 @@ controls:
   # > using `paths` below.
   ###########################################################
   scripts:
-    - paths: ../platforms/macos/scripts/*.sh
-    - paths: ../platforms/windows/scripts/*.ps1
-    - paths: ../platforms/linux/scripts/*.sh
+    # - paths: ../platforms/macos/scripts/*.sh
+    # - paths: ../platforms/windows/scripts/*.ps1
+    # - paths: ../platforms/linux/scripts/*.sh
 
 ###########################################################
 # Reports
