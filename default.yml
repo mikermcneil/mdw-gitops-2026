@@ -40,7 +40,7 @@ org_settings:
     # will have to take action to restore MDM functionality (due
     # to the way Apple's device management protocol works.)
     ###########################################################
-    server_url: "https://fleet.example.com"
+    server_url: $FLEET_URL #"https://fleet.example.com"
     #           ^TODO: Replace with the URL where Fleet is running.
 
   ###########################################################
