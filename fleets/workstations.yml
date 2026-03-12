@@ -192,7 +192,7 @@ software:
 
 # Just for compatibility w/ ≤v4.82
 settings:
+  secrets: # « Just for compatibility w/ ≤v4.82
 agent_options:
 reports:
 policies:
-secrets: # « Just for compatibility w/ ≤v4.82
