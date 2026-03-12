@@ -1,0 +1,223 @@
+<!-- Microsoft Edge enterprise configuration profile for Windows.
+     Configures sensible enterprise defaults for Edge (Chromium) via ADMX-backed Policy CSP. -->
+
+<!-- Hide the First-run experience and splash screen -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge/HideFirstRunExperience</LocURI>
+    </Target>
+    <Data><![CDATA[<enabled/>]]></Data>
+  </Item>
+</Replace>
+
+<!-- Set homepage to about:blank -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge~Startup/HomepageLocation</LocURI>
+    </Target>
+    <Data><![CDATA[<enabled/><data id="HomepageLocation" value="about:blank"/>]]></Data>
+  </Item>
+</Replace>
+
+<!-- Set homepage to new tab page: disabled (use the URL set above instead) -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge~Startup/HomepageIsNewTabPage</LocURI>
+    </Target>
+    <Data><![CDATA[<disabled/>]]></Data>
+  </Item>
+</Replace>
+
+<!-- Enable Microsoft Defender SmartScreen -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge~SmartScreen/SmartScreenEnabled</LocURI>
+    </Target>
+    <Data><![CDATA[<enabled/>]]></Data>
+  </Item>
+</Replace>
+
+<!-- Block third-party cookies (DefaultCookiesSetting: 1=Allow all, 2=Block all, 4=Block third-party) -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge~ContentSettings/DefaultCookiesSetting</LocURI>
+    </Target>
+    <Data><![CDATA[<enabled/><data id="DefaultCookiesSetting" value="4"/>]]></Data>
+  </Item>
+</Replace>
+
+<!-- Enable the built-in password manager -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge~PasswordManager/PasswordManagerEnabled</LocURI>
+    </Target>
+    <Data><![CDATA[<enabled/>]]></Data>
+  </Item>
+</Replace>
+
+<!-- Disable sync to prevent passwords and browser data from syncing to personal accounts -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge/SyncDisabled</LocURI>
+    </Target>
+    <Data><![CDATA[<enabled/>]]></Data>
+  </Item>
+</Replace>
+
+<!-- Browser sign-in: optional (1 = Enable, users can sign in but are not forced) -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge/BrowserSignin</LocURI>
+    </Target>
+    <Data><![CDATA[<enabled/><data id="BrowserSignin" value="1"/>]]></Data>
+  </Item>
+</Replace>
+
+<!-- Disable guest mode -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge/BrowserGuestModeEnabled</LocURI>
+    </Target>
+    <Data><![CDATA[<disabled/>]]></Data>
+  </Item>
+</Replace>
+
+<!-- Disable importing browser data on first run (AutoImportAtFirstRun: 4 = Disables auto-import) -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge/AutoImportAtFirstRun</LocURI>
+    </Target>
+    <Data><![CDATA[<enabled/><data id="AutoImportAtFirstRun" value="4"/>]]></Data>
+  </Item>
+</Replace>
+
+<!-- Enable pop-up blocker (DefaultPopupsSetting: 2 = Block pop-ups) -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge~ContentSettings/DefaultPopupsSetting</LocURI>
+    </Target>
+    <Data><![CDATA[<enabled/><data id="DefaultPopupsSetting" value="2"/>]]></Data>
+  </Item>
+</Replace>
+
+<!-- Enable automatic updates (allow Edge to update itself) -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge_recommended/UpdateDefault</LocURI>
+    </Target>
+    <Data><![CDATA[<enabled/>]]></Data>
+  </Item>
+</Replace>
+
+<!-- Disable InPrivate mode (0 = InPrivate available, 1 = Disabled, 2 = Forced) -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge/InPrivateModeAvailability</LocURI>
+    </Target>
+    <Data><![CDATA[<enabled/><data id="InPrivateModeAvailability" value="1"/>]]></Data>
+  </Item>
+</Replace>
+
+<!-- Prevent SmartScreen bypass for sites (users cannot dismiss SmartScreen warnings) -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge~SmartScreen/PreventSmartScreenPromptOverride</LocURI>
+    </Target>
+    <Data><![CDATA[<enabled/>]]></Data>
+  </Item>
+</Replace>
+
+<!-- Prevent SmartScreen bypass for file downloads -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge~SmartScreen/PreventSmartScreenPromptOverrideForFiles</LocURI>
+    </Target>
+    <Data><![CDATA[<enabled/>]]></Data>
+  </Item>
+</Replace>
+
+<!-- Disable browser history deletion -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge/AllowDeletingBrowserHistory</LocURI>
+    </Target>
+    <Data><![CDATA[<disabled/>]]></Data>
+  </Item>
+</Replace>
+
+<!-- Disable developer tools in managed environments (0 = Allow, 1 = Allow for extensions installed by enterprise policy, 2 = Disallowed) -->
+<Replace>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+    </Meta>
+    <Target>
+      <LocURI>./Device/Vendor/MSFT/Policy/Config/microsoft_edge~Policy~microsoft_edge/DeveloperToolsAvailability</LocURI>
+    </Target>
+    <Data><![CDATA[<enabled/><data id="DeveloperToolsAvailability" value="1"/>]]></Data>
+  </Item>
+</Replace>
