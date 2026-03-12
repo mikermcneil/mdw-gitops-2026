@@ -12,7 +12,8 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 org_settings: 
-  secrets: # « Just for compatibility w/ ≤v4.82
+  secrets:
+    - secret: "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d"
   org_info:
     ###########################################################
     # The name of your organization is displayed to end users
@@ -22,8 +23,7 @@ org_settings:
     # Read more:
     #   • https://fleetdm.com/docs/configuration/yaml-files#org-info
     ###########################################################
-    org_name: "My organization"
-    #         ^TODO: Replace with the name of your organization
+    org_name: "ACME Inc"
 
   server_settings:
     ###########################################################
@@ -42,6 +42,9 @@ org_settings:
     ###########################################################
     server_url: $FLEET_URL #"https://fleet.example.com"
     #           ^TODO: Replace with the URL where Fleet is running.
+
+  fleet_desktop:
+    transparency_url: https://omfgdogs.com
 
   ###########################################################
   # Uncomment to use single sign-on (SSO) for admins accessing Fleet.
