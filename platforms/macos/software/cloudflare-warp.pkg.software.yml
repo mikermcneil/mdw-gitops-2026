@@ -1,3 +1,3 @@
-- url: https://1111-releases.cloudflareclient.com/mac/Cloudflare_WARP.pkg
+- url: https://1111-releases.cloudflareclient.com/mac/Cloudflare_WARP_2024.12.554.0.pkg
   post_install_script:
     path: ../scripts/configure-cloudflare-warp.sh
