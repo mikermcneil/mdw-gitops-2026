@@ -48,10 +48,10 @@ controls:
   # For more, see:
   #   • https://fleetdm.com/docs/configuration/yaml-files#apple-settings-and-windows-settings
   #
-  # Note: Instead of including all profiles with `paths`,
-  # you can also switch to using `path` and including each 
-  # specific configuration profile one by one, which allows
-  # for scoping using labels.  For example:
+  # Note: Instead of including all profiles with `path`,
+  # you can also include each specific configuration profile
+  # one by one, which allows for scoping using labels.
+  # For example:
   # ```
   # - path: ../platforms/macos/configuration-profiles/1password-managed-settings.mobileconfig
   #   labels_include_any:
@@ -60,11 +60,11 @@ controls:
   ###########################################################
   apple_settings:
     profiles:
-      - paths: ../platforms/macos/declaration-profiles/*.json
-      - paths: ../platforms/macos/configuration-profiles/*.mobileconfig
+      - path: ../platforms/macos/declaration-profiles/*.json
+      - path: ../platforms/macos/configuration-profiles/*.mobileconfig
   windows_settings:
     profiles:
-      - paths: ../platforms/windows/configuration-profiles/*.xml
+      - path: ../platforms/windows/configuration-profiles/*.xml
   
   ###########################################################
   # Managed disk encryption
@@ -108,12 +108,12 @@ controls:
   # > use cases and in your custom automations, just include it
   # > in the appropriate folder for the primary platform where it
   # > is intended to run.  It will be included automatically
-  # > using `paths` below.
+  # > using `path` below.
   ###########################################################
   scripts:
-    # - paths: ../platforms/macos/scripts/*.sh
-    # - paths: ../platforms/windows/scripts/*.ps1
-    # - paths: ../platforms/linux/scripts/*.sh
+    # - path: ../platforms/macos/scripts/*.sh
+    # - path: ../platforms/windows/scripts/*.ps1
+    # - path: ../platforms/linux/scripts/*.sh
 
 ###########################################################
 # Reports
@@ -124,13 +124,13 @@ controls:
 # > it as a .yml file in `platforms/all/reports/` or if it
 # > is specific to a particular platform, then in the appropriate
 # > folder for that platform.  It will be included automatically
-# > using `paths` below.
+# > using `path` below.
 ###########################################################
 reports:
-  - paths: ../platforms/all/reports/*.yml
-  - paths: ../platforms/macos/reports/*.yml
-  - paths: ../platforms/windows/reports/*.yml
-  - paths: ../platforms/linux/reports/*.yml
+  - path: ../platforms/all/reports/*.yml
+  - path: ../platforms/macos/reports/*.yml
+  - path: ../platforms/windows/reports/*.yml
+  - path: ../platforms/linux/reports/*.yml
 
 ###########################################################
 # Policies & automations
@@ -142,12 +142,12 @@ reports:
 # > or regulations, include it as a .yml file in the
 # > appropriate folder for the primary platform where it
 # > is intended to run.  It will be included automatically
-# > using `paths` below.
+# > using `path` below.
 ###########################################################
 policies:
-  - paths: ../platforms/macos/policies/*.yml
-  - paths: ../platforms/windows/policies/*.yml
-  - paths: ../platforms/linux/policies/*.yml
+  - path: ../platforms/macos/policies/*.yml
+  - path: ../platforms/windows/policies/*.yml
+  - path: ../platforms/linux/policies/*.yml
 
 ###########################################################
 # Software available for install

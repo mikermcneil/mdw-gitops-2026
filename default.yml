@@ -138,7 +138,7 @@ controls:
 # > "Make sure everyone in finance has the latest version of Excel"
 ###########################################################
 labels:
-  # - paths: ./labels/*.yml « # Just for compatibility w/ ≤v4.82
+  # - path: ./labels/*.yml « # Just for compatibility w/ ≤v4.82
 
 # Just for compatibility w/ ≤v4.82
 agent_options:
