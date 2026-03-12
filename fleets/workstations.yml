@@ -180,7 +180,7 @@ software:
       categories:
         - Communication
         - Productivity
-    - slug: mozilla-firefox/darwin # Mozilla Firefox for macOS
+    - slug: firefox/darwin # Mozilla Firefox for macOS
       self_service: true
       categories:
         - Productivity
@@ -213,7 +213,7 @@ software:
       categories:
         - Communication
         - Productivity
-    - slug: mozilla-firefox/windows # Mozilla Firefox for Windows
+    - slug: firefox/windows # Mozilla Firefox for Windows
       self_service: true
       categories:
         - Productivity
