@@ -1,3 +1,4 @@
-- url: https://downloads.cloudflareclient.com/v1/download/macos/version/2024.12.554.0
-  post_install_script:
-    path: ../scripts/configure-cloudflare-warp.sh
+# Cloudflare WARP macOS — commented out due to 403 errors from CDN bot protection
+# - url: https://downloads.cloudflareclient.com/v1/download/macos/version/2024.12.554.0
+#   post_install_script:
+#     path: ../scripts/configure-cloudflare-warp.sh

@@ -191,10 +191,12 @@ software:
       categories:
         - Communication
         - Productivity
-    - path: ../platforms/macos/software/cloudflare-warp.pkg.software.yml
+    # Cloudflare WARP macOS — commented out due to 403 errors from CDN bot protection
+    # - path: ../platforms/macos/software/cloudflare-warp.pkg.software.yml
 
     # Windows custom packages
-    - path: ../platforms/windows/software/cloudflare-warp.msi.software.yml
+    # Cloudflare WARP Windows — commented out due to 403 errors from CDN bot protection
+    # - path: ../platforms/windows/software/cloudflare-warp.msi.software.yml
 
     # Linux custom packages
     # …
