@@ -1,0 +1,27 @@
+<Add>
+  <Item>
+    <Meta>
+      <Format xmlns="syncml:metinf">chr</Format>
+      <Type xmlns="syncml:metinf">text/plain</Type>
+    </Meta>
+    <Target>
+      <LocURI>./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/BlockM365CopilotChat/StoreApps/Policy</LocURI>
+    </Target>
+    <Data>&lt;RuleCollection Type="Appx" EnforcementMode="Enabled"&gt;
+  &lt;FilePublisherRule Id="a9672d58-a4b2-4742-b7e2-5bca3bedea4c" Name="Block M365 Copilot Chat" Description="Blocks the M365 Copilot Chat app from the Microsoft Store." UserOrGroupSid="S-1-1-0" Action="Deny"&gt;
+    &lt;Conditions&gt;
+      &lt;FilePublisherCondition PublisherName="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" ProductName="Microsoft.Copilot" BinaryName="*"&gt;
+        &lt;BinaryVersionRange LowSection="*" HighSection="*" /&gt;
+      &lt;/FilePublisherCondition&gt;
+    &lt;/Conditions&gt;
+  &lt;/FilePublisherRule&gt;
+  &lt;FilePublisherRule Id="b5e44018-98e0-4f60-9db2-acc037b9f5d0" Name="Allow all other Store apps" Description="Allow all other packaged apps by default." UserOrGroupSid="S-1-1-0" Action="Allow"&gt;
+    &lt;Conditions&gt;
+      &lt;FilePublisherCondition PublisherName="*" ProductName="*" BinaryName="*"&gt;
+        &lt;BinaryVersionRange LowSection="0.0.0.0" HighSection="*" /&gt;
+      &lt;/FilePublisherCondition&gt;
+    &lt;/Conditions&gt;
+  &lt;/FilePublisherRule&gt;
+&lt;/RuleCollection&gt;</Data>
+  </Item>
+</Add>

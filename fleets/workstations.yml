@@ -67,6 +67,7 @@ controls:
   windows_settings:
     profiles:
       # - paths: ../platforms/windows/configuration-profiles/*.xml  # Glob paths not yet supported
+      - path: ../platforms/windows/configuration-profiles/block-m365-copilot-chat.xml
   
   ###########################################################
   # Managed disk encryption
