@@ -27,7 +27,7 @@ controls:
     #   • https://fleetdm.com/docs/configuration/yaml-files#end-user-authentication
     #   • https://fleetdm.com/guides/setup-experience#end-user-authentication
     ###########################################################
-    # enable_end_user_authentication: true
+    enable_end_user_authentication: true
 
   ###########################################################
   # Presets, restrictions, and configs
